@@ -10,7 +10,10 @@ const products = [];
 
 router.get("/add-product", (req, res) => {
   console.log("Inside add products route");
-  res.render("add-product");
+  res.render("add-product", {
+    pageTitle: "add product",
+    path: "/admin/add-product",
+  });
 });
 
 router.post("/add-product", (req, res) => {

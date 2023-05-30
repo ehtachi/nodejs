@@ -24,7 +24,7 @@ app.use(shopRoutes);
 
 //error handling --> if the path does not match the paths that are already defined
 app.use("/", (req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
+  res.status(404).render("404");
 });
 
 app.listen(3000);
